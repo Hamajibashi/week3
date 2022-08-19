@@ -10,10 +10,8 @@
 }
 
 body {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Noto Sans TC', sans-serif;
     line-height: 1.5;
-    font-size: 16px;
 }
 
 img {
@@ -126,7 +124,6 @@ h3 {
 @media(max-width:767px) {
     .header .container {
         flex-direction: column;
-        align-items: center;
         padding-bottom: 0;
     }
 
@@ -156,7 +153,7 @@ h3 {
 }
 
 .banner .container {
-    height: 787px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,7 +223,7 @@ h3 {
     height: 83px;
 }
 
-.profession li p{
+.profession li p {
     text-align: left;
 }
 
@@ -303,11 +300,7 @@ h3 {
     background-position: center center;
 }
 
-.collaboration .rwd {
-    display: none;
-}
-
-.collaboration .pc {
+.collaboration ul {
     display: flex;
 }
 
@@ -324,16 +317,13 @@ h3 {
     .collaboration {
         padding: 40px 0;
     }
-
-    .collaboration .pc {
-        display: none;
-    }
-
-    .collaboration .rwd {
-        display: flex;
+    
+    .collaboration ul {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
+    }
+    .collaboration li:nth-child(1) {
+        margin-bottom: 24px;
     }
 }
 
@@ -368,7 +358,7 @@ h3 {
     font-weight: 500;
 }
 
-.recommendation .date {
+.recommendation time {
     font-size: 14px;
     color: #707070;
 }
@@ -406,6 +396,10 @@ h3 {
     text-align: left;
 }
 
+.form label {
+    display: block;
+}
+
 .form .input {
     width: 100%;
     background-color: transparent;
@@ -426,10 +420,13 @@ h3 {
 .form #check {
     margin-right: 4px;
 }
+.form .check-text{
+    display: inline;
+}
 
 .form .btn {
     width: 416px;
-    padding: 16px 176px;
+    padding: 16px 0;
     text-align: center;
     margin: 0 auto;
 }
